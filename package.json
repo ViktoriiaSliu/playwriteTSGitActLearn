@@ -2,13 +2,29 @@
   "name": "playwrite_learn",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "test": "npx playwright test",
+    "clean": "rimraf test-results",
+    "api-tests": "npx playwright test --project=api-tests",
+    "ui-tests": "npx playwright test --project=ui-tests",
+    "api-flow": "npx playwright test src/api/api_tests/api_flow.spec.ts",
+    "report": "npx playwright show-report",
+    "lint": "eslint . --fix",
+    "format": "npx prettier --write ."
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@eslint/js": "^9.33.0",
     "@playwright/test": "^1.54.2",
-    "@types/node": "^24.2.0"
+    "@types/node": "^24.2.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "3.6.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1"
   }
 }
