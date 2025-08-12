@@ -1,4 +1,40 @@
-import { UserDynamic, UserStatic, LoginUser } from '../types/user';
+//import { UserDynamic, UserStatic, LoginUser } from '../types/user.ts';
+export interface UserDynamic {
+    firstName: string;
+    lastName: string;
+    email: string;
+    day: string;
+    month: string;
+    year: string;
+    address: string;
+    country: string;
+    state: string;
+    city: string;
+    zipcode: string;
+    mobileNumber: string;
+    password: string;
+}
+
+export interface UserStatic {
+    firstName: string;
+    lastName: string;
+    email: string;
+    day: string;
+    month: string;
+    year: string;
+    address: string;
+    country: string;
+    state: string;
+    city: string;
+    zipcode: string;
+    mobileNumber: string;
+    password: string;
+}
+
+export interface LoginUser {
+    email: string;
+    password: string;
+}
 
 const generateRandomEmail = (): string => {
   return `testuser${Date.now()}_${Math.floor(Math.random() * 1000)}@example.com`;
@@ -47,4 +83,4 @@ export const testData: {
   },
 };
 
-export { UserDynamic, UserStatic, LoginUser };
+//export { UserDynamic, UserStatic, LoginUser };
